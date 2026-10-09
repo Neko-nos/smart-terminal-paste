@@ -1,0 +1,46 @@
+{
+    "name": "smart-terminal-paste",
+    "displayName": "Smart Terminal Paste",
+    "description": "Routes terminal paste to text or image input based on the macOS clipboard.",
+    "version": "0.1.0",
+    "private": true,
+    "publisher": "neko-nos-local",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Neko-nos/smart-terminal-paste.git"
+    },
+    "engines": {
+        "node": ">=22",
+        "vscode": "^1.132.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "extensionKind": [
+        "ui"
+    ],
+    "main": "./extension.js",
+    "capabilities": {
+        "untrustedWorkspaces": {
+            "supported": true
+        }
+    },
+    "contributes": {
+        "commands": [
+            {
+                "command": "smartTerminalPaste.paste",
+                "title": "Smart Terminal Paste"
+            }
+        ]
+    },
+    "scripts": {
+        "check": "biome check --error-on-warnings .",
+        "format": "biome check --write .",
+        "package": "vsce package --no-dependencies"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.5.15",
+        "@vscode/vsce": "4.0.0"
+    }
+}

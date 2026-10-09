@@ -1,0 +1,7 @@
+.git/**
+node_modules/**
+biome.json
+.gitignore
+package-lock.json
+*.vsix
+*.log
