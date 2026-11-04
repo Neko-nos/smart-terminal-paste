@@ -1,4 +1,5 @@
 .git/**
+scripts/**
 node_modules/**
 biome.json
 .gitignore
