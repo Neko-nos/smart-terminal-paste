@@ -11,6 +11,15 @@ npm run package
 
 Run **Extensions: Install from VSIX…** and select `smart-terminal-paste-0.1.0.vsix`. Install locally on your Mac, including for remote workspaces.
 
+### Automatic updates after pulling
+
+Enable automatic updates once in this checkout:
+
+```sh
+git config --local hook.update-extension.command ./scripts/update-extension.sh
+git config --local hook.update-extension.event post-merge
+```
+
 ## Use
 
 Focus an integrated terminal and run **Smart Terminal Paste**. To use `Cmd+V`, assign it to this command in **Preferences: Open Keyboard Shortcuts**, with `terminalFocus` as the when condition.
